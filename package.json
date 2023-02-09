@@ -1,0 +1,36 @@
+{
+  "name": "renovate-config",
+  "version": "0.0.0",
+  "private": false,
+  "license": "AGPL-3.0",
+  "engines": {
+    "node": "16",
+    "npm": ">=8.13.2 <9"
+  },
+  "description": "Renovate config",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "prettier --check .",
+    "test": "run-p validate:*",
+    "validate:default": "RENOVATE_CONFIG_FILE=default.json renovate-config-validator",
+    "validate:aggressive": "RENOVATE_CONFIG_FILE=aggressive.json renovate-config-validator"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VincentHardouin/renovate-config.git"
+  },
+  "keywords": [
+    "renovate",
+    "config"
+  ],
+  "author": "Vincent Hardouin",
+  "bugs": {
+    "url": "https://github.com/VincentHardouin/renovate-config/issues"
+  },
+  "homepage": "https://github.com/VincentHardouin/renovate-config#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.0",
+    "renovate": "^34.48.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":maintainLockFilesMonthly",
+    ":preserveSemverRanges",
+    ":semanticCommits",
+    "schedule:earlyMondays",
+    "local>VincentHardouin/renovate-config//presets/group-dependencies-non-major",
+    "local>VincentHardouin/renovate-config//presets/group-by-directory"
+  ],
+  "prConcurrentLimit": 5,
+  "rangeStrategy": "bump",
+  "labels": ["dependencies", "renovate"],
+  "stabilityDays": 7
+}
