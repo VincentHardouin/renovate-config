@@ -11,9 +11,11 @@
   "scripts": {
     "format": "prettier --write .",
     "lint": "prettier --check .",
-    "test": "run-p validate:*",
+    "test": "run-p validate:**",
     "validate:default": "RENOVATE_CONFIG_FILE=default.json renovate-config-validator",
-    "validate:aggressive": "RENOVATE_CONFIG_FILE=aggressive.json renovate-config-validator"
+    "validate:aggressive": "RENOVATE_CONFIG_FILE=aggressive.json renovate-config-validator",
+    "validate:preset:group-by-directory": "RENOVATE_CONFIG_FILE=presets/group-by-directory.json renovate-config-validator",
+    "validate:preset:group-dependencies-non-major": "RENOVATE_CONFIG_FILE=presets/group-dependencies-non-major.json renovate-config-validator"
   },
   "repository": {
     "type": "git",
