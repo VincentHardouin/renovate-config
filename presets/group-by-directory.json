@@ -1,4 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "additionalBranchPrefix": "{{baseDir}}-",
+  "additionalBranchPrefix": "{{parentDir}}-",
+  "commitMessageSuffix": "{{#if parentDir}}({{parentDir}}){{/if}}"
 }
